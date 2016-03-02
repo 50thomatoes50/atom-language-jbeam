@@ -1,4 +1,8 @@
-# JBEAM language support in Atom [![Build Status](https://travis-ci.org/50thomatoes50/atom-language-jbeam.svg?branch=master)](https://travis-ci.org/50thomatoes50/atom-language-jbeam)
+# JBEAM language support in Atom
+Travis : [![Build Status](https://travis-ci.org/50thomatoes50/atom-language-jbeam.svg?branch=master)](https://travis-ci.org/50thomatoes50/atom-language-jbeam)
+
+Appveyor : [![Build Status](https://img.shields.io/appveyor/ci/50thomatoes50/atom-language-jbeam.svg)](https://ci.appveyor.com/project/50thomatoes50/atom-language-jbeam)
+
 
 Adds syntax highlighting of JBEAM files in Atom.
 
