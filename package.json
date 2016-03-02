@@ -1,0 +1,20 @@
+{
+  "name": "atom-language-jbeam",
+  "version": "0.0.1",
+  "description": "JSON language support in Atom",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://50thomatoes50.github.io/atom-language-jbeam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/50thomatoes50/atom-language-jbeam.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/50thomatoes50/atom-language-jbeam/issues"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.10.1"
+  }
+}

@@ -1,0 +1,165 @@
+'scopeName': 'source.jbeam'
+'fileTypes': [
+  'jbeam'
+]
+'name': 'JBEAM'
+'patterns': [
+  {
+    'include': '#value'
+  }
+]
+'repository':
+  'array':
+    'begin': '\\['
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.array.begin.jbeam'
+    'end': '\\]'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.array.end.jbeam'
+    'name': 'meta.structure.array.jbeam'
+    'patterns': [
+      {
+        'include': '#value'
+      }
+      {
+        'include': '#command'
+      }
+      {
+        'match': ','
+        'name': 'punctuation.separator.array.jbeam'
+      }
+      {
+        'match': '[^\\s\\]]'
+        'name': 'invalid.illegal.expected-array-separator.jbeam'
+      }
+    ]
+  'constant':
+    'match': '\\b(?:true|false|null)\\b'
+    'name': 'constant.language.jbeam'
+  'command':
+    'match': '\\b(?:information|name|authors|slotType|refNodes|ref:|back:|left:|up:|cameraExternal|distance|distanceMin|offset|fov|flexbodies|mesh|[group]:|nonFlexMaterials|nodes|id|posX|posY|posZ|collision|nodeMaterial|group|fixed|nodeWeight|beams|id1|id2|breakGroup|beamSpring|beamDamp|beamDeform|beamStrength|disableMeshBreaking|triangles)\\b'
+    'name': 'command.language.jbeam'
+  'number':
+    'comment': 'handles integer and decimal numbers'
+    'match': '-?(?=[1-9]|0(?!\\d))\\d+(\\.\\d+)?([eE][+-]?\\d+)?'
+    'name': 'constant.numeric.jbeam'
+  'object':
+    'begin': '\\{'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.dictionary.begin.jbeam'
+    'comment': 'a jbeam object'
+    'end': '\\}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.dictionary.end.jbeam'
+    'name': 'meta.structure.dictionary.jbeam'
+    'patterns': [
+      {
+        'comment': 'the jbeam object key'
+        'include': '#string'
+      }
+      {
+        'include': '#command'
+      }
+      {
+        'begin': ':'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.separator.dictionary.key-value.jbeam'
+        'end': '(,)|(?=\\})'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.separator.dictionary.pair.jbeam'
+        'name': 'meta.structure.dictionary.value.jbeam'
+        'patterns': [
+          {
+            'comment': 'the jbeam object value'
+            'include': '#value'
+          }
+          {
+            'match': '[^\\s,]'
+            'name': 'invalid.illegal.expected-dictionary-separator.jbeam'
+          }
+        ]
+      }
+      {
+        'match': '[^\\s\\}]'
+        'name': 'invalid.illegal.expected-dictionary-separator.jbeam'
+      }
+    ]
+  'string':
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.jbeam'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.jbeam'
+    'name': 'string.quoted.double.jbeam'
+    'patterns': [
+      {
+        'include': '#command'
+      }
+      {
+        'match': '(?x:                # turn on extended mode\n                     \\\\                # a literal backslash\n                     (?:               # ...followed by...\n                       ["\\\\/bfnrt]     # one of these characters\n                       |               # ...or...\n                       u               # a u\n                       [0-9a-fA-F]{4}  # and four hex digits\n                     )\n                   )'
+        'name': 'constant.character.escape.jbeam'
+      }
+      {
+        'match': '\\\\.'
+        'name': 'invalid.illegal.unrecognized-string-escape.jbeam'
+      }
+    ]
+  'value':
+    'comment': 'the \'value\' diagram at http://json.org'
+    'patterns': [
+      {
+        'include': '#constant'
+      }
+      {
+        'include': '#number'
+      }
+      {
+        'include': '#string'
+      }
+      {
+        'include': '#array'
+      }
+      {
+        'include': '#object'
+      }
+      {
+        'include': '#comments'
+      }
+    ]
+  'comments':
+    'patterns': [
+      {
+        'begin': '/\\*'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.jbeam'
+        'end': '\\*/'
+        'name': 'comment.block.jbeam'
+      }
+      {
+        'begin': '(^[ \\t]+)?(?=//)'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.whitespace.comment.leading.jbeam'
+        'end': '(?!\\G)'
+        'patterns': [
+          {
+            'begin': '//'
+            'beginCaptures':
+              '0':
+                'name': 'punctuation.definition.comment.jbeam'
+            'end': '\\n'
+            'name': 'comment.line.double-slash.jbeam'
+          }
+        ]
+      }
+    ]
