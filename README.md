@@ -3,6 +3,8 @@ Travis : [![Build Status](https://travis-ci.org/50thomatoes50/atom-language-jbea
 
 Appveyor : [![Build Status](https://img.shields.io/appveyor/ci/50thomatoes50/atom-language-jbeam.svg)](https://ci.appveyor.com/project/50thomatoes50/atom-language-jbeam)
 
+Circle : [![Build Status](https://img.shields.io/circleci/project/50thomatoes50/atom-language-jbeam.svg)](https://circleci.com/gh/50thomatoes50/atom-language-jbeam)
+
 
 Adds syntax highlighting of JBEAM files in Atom.
 
