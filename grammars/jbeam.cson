@@ -24,9 +24,6 @@
         'include': '#value'
       }
       {
-        'include': '#command'
-      }
-      {
         'match': ','
         'name': 'punctuation.separator.array.jbeam'
       }
@@ -40,7 +37,7 @@
     'name': 'constant.language.jbeam'
   'command':
     'match': '\\b(?:information|name|authors|slotType|refNodes|ref:|back:|left:|up:|cameraExternal|distance|distanceMin|offset|fov|flexbodies|mesh|[group]:|nonFlexMaterials|nodes|id|posX|posY|posZ|collision|nodeMaterial|group|fixed|nodeWeight|beams|id1|id2|breakGroup|beamSpring|beamDamp|beamDeform|beamStrength|disableMeshBreaking|triangles)\\b'
-    'name': 'command.language.jbeam'
+    'name': '.support.function.any-method command.function.language.jbeam'
   'number':
     'comment': 'handles integer and decimal numbers'
     'match': '-?(?=[1-9]|0(?!\\d))\\d+(\\.\\d+)?([eE][+-]?\\d+)?'
@@ -133,6 +130,9 @@
       }
       {
         'include': '#comments'
+      }
+      {
+        'include': '#command'
       }
     ]
   'comments':

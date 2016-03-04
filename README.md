@@ -1,5 +1,8 @@
 # JBEAM language support in Atom
-Travis : [![Build Status](https://travis-ci.org/50thomatoes50/atom-language-jbeam.svg?branch=master)](https://travis-ci.org/50thomatoes50/atom-language-jbeam)
+[![Build Status](https://travis-ci.org/50thomatoes50/atom-language-jbeam.svg?branch=master)](https://travis-ci.org/50thomatoes50/atom-language-jbeam)
+[![Package Version](https://img.shields.io/apm/v/atom-language-jbeam.svg)](https://atom.io/packages/atom-language-jbeam)
+[![Package Downloads](https://img.shields.io/apm/dm/atom-language-jbeam.svg)](https://atom.io/packages/atom-language-jbeam)
+[![Dependency Status](https://img.shields.io/david/50thomatoes50/atom-language-jbeam.svg)](https://david-dm.org/50thomatoes50/atom-language-jbeam)
 
 Appveyor : [![Build Status](https://img.shields.io/appveyor/ci/50thomatoes50/atom-language-jbeam.svg)](https://ci.appveyor.com/project/50thomatoes50/atom-language-jbeam)
 

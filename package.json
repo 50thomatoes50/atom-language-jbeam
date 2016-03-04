@@ -1,7 +1,7 @@
 {
   "name": "atom-language-jbeam",
-  "version": "0.0.1",
-  "description": "JSON language support in Atom",
+  "version": "0.1.0",
+  "description": "JBEAM(JSON) language support in Atom",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
